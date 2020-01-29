@@ -1,0 +1,19 @@
+Package: EXTEND
+Title: EXTEND(EXpression based Telomerase ENzyme Detection)
+Version: 1.0
+Authors@R: 
+    person(given = "SIYUAN",
+           family = "ZHENG",
+           role = c("aut", "cre"),
+           email = "ZhengS3@uthscsa.edu",
+           comment = c(ORCID = "YOUR-ORCID-ID"))
+	person(given = "NIGHAT",
+           family = "NOUREEN",
+           role = c("aut", "cre"),
+           email = "noureen@uthscsa.edu",
+           comment = c(ORCID = "YOUR-ORCID-ID"))
+Description: EXTEND calculates Telomerase activity scores using GENE expression data.
+License: MIT
+Encoding: UTF-8
+LazyData: true
+RoxygenNote: 7.0.2
