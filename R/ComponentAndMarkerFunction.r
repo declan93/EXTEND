@@ -3,6 +3,7 @@ ComponentAndMarkerFunction <- function(DataRanks2,TERTrank,TERCrank,Datasize){
 
 TM_Facts = DataRanks2[c(TERTrank,TERCrank),]
 TM_Facts = t(TM_Facts)
+write.table(TM_Facts,'test.TMFACTS.txt')
 
 
 TM_FactsMaxAll = data.frame(rownames(TM_Facts)[1],max(TM_Facts[1,1],TM_Facts[1,2]))
