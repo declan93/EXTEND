@@ -25,7 +25,7 @@ DataRanks3 = DataRanks3[,-1]
 DataRanks3 = t(DataRanks3)
 
 DataRanks3 = 10000*DataRanks3/nrow(data)
-write.table(DataRank3,'test.rank3.txt')
+write.table(DataRanks3,'test.rank3.txt')
 CumSum = data.frame(colSums(DataRanks3, na.rm = FALSE, dims = 1))    ### Cumsum of each sample calculated based on the ranks
 colnames(CumSum)[1]='RawRankSum'
 SampleID = rownames(CumSum)
