@@ -13,7 +13,7 @@ TM_FactsMax = data.frame(rownames(TM_Facts)[i],max(TM_Facts[i,1],TM_Facts[i,2]))
 colnames(TM_FactsMax)=c('SampleID','Max')
 TM_FactsMaxAll = rbind(TM_FactsMaxAll,TM_FactsMax)
 }
-
+write.table(TM_FactsMaxAll,'test.TM_FactsMaxAll.txt')
 DataRanks3 = DataRanks2[-c(TERCrank,TERTrank),]
 DataRanks3 = t(DataRanks3)
 SampleID = rownames(DataRanks3)
