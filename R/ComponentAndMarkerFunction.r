@@ -20,11 +20,13 @@ SampleID = rownames(DataRanks3)
 DataRanks3 = data.frame(SampleID,DataRanks3)
 row.names(DataRanks3) = NULL
 DataRanks3 = merge(TM_FactsMaxAll,DataRanks3,by='SampleID')
-write.table(DataRanks3,'test.DataRanks3.txt')
+
+
 row.names(DataRanks3) = DataRanks3$SampleID
 DataRanks3 = DataRanks3[,-1]
 DataRanks3 = t(DataRanks3)
-
+write.table(DataRanks3,'test.DataRanks3.txt')
+  
 DataRanks3 = 10000*DataRanks3/nrow(data)
 write.table(DataRanks3,'test.rank3.txt')
 CumSum = data.frame(colSums(DataRanks3, na.rm = FALSE, dims = 1))    ### Cumsum of each sample calculated based on the ranks
