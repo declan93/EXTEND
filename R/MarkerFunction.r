@@ -1,6 +1,6 @@
 MarkerFunction <- function(DataRanks2,Datasize){
-
-DataRanks3 = DataRanks2
+write.table(DataRanks2,'DataRanks2.txt',sep='\t',quote=FALSE,row.names=FALSE)
+DataRanks3 = na.omit(DataRanks2)
 DataRanks3 = 10000*DataRanks3/Datasize
 CumSum = data.frame(colSums(DataRanks3, na.rm = FALSE, dims = 1))    ### Cumsum of each sample calculated based on the ranks
 colnames(CumSum)[1]='RawRankSum'
