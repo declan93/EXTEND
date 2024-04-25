@@ -9,6 +9,6 @@
 RunEXTEND = function(data){
 
 InputData(data)
-message('Running EXTEND')
+message('Running EXTEND2')
 
 }### EXTEND ENDS HERE
