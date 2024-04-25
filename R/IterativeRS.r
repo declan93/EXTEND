@@ -24,7 +24,7 @@ DataRanks = cbind(DataRanks,sub)
 row.names(DataRanks)=DataRanks$Genes
 
 DataRanks = DataRanks[,-1]
-print(DataRanks[1:4,1:5])
+write.table(DataRanks, 'test.dataranks.txt')
 DataRanks2 = DataRanks[complete.cases(DataRanks),]
 print(DataRanks2[1:4,1:5])
 TERTrank = match("TERT",rownames(DataRanks2))
